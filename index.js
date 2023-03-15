@@ -18,3 +18,24 @@ db.connect(function (err) {
   // initializing the employeeMenu function after the connection is made
   employeeMenu();
 });
+
+//Menu for employee that stores all the options
+const employeeMenu = () => {
+  inquirer.createPromptModule([{
+    type: 'list',
+    name: 'choice',
+    message: 'what do you want to do?',
+    choices: [
+      "View Departments",
+      "View",
+      "View Employees",
+      "Add Department",
+      "Add Role",
+      "Add Employee",
+      "Update Employee Role",
+    ]
+  }])
+    .then(function (data)){
+    
+  }
+}
